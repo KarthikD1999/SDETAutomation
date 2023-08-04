@@ -36,7 +36,7 @@ public class Firstpalindrome {
 			for (int j = word.length()-1; j >=0; j--)	{
 
 				revword=revword+word.charAt(j);
-
+					
 			}
 			if (revword.equals(word)) {
 				return word;
