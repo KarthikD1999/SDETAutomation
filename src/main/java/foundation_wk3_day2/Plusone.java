@@ -30,7 +30,7 @@ public class Plusone {
 				
 				result[arr[i]]=arr[i];
 			}
-			return result[];
+			return result;
 		
 	}
 

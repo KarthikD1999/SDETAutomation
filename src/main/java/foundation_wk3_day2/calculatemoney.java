@@ -1,5 +1,7 @@
 package foundation_wk3_day2;
 
+import java.util.Iterator;
+
 import org.junit.Test;
 
 import junit.framework.Assert;
@@ -7,11 +9,13 @@ import junit.framework.Assert;
 public class calculatemoney {
 	
 	@Test
-	public void test() {
+	public void test2() {
 		
-		Assert.assertEquals(4, bank(4));
+		Assert.assertEquals(10, bank(4));
 
 	}
+	
+	
 	
 	@Test
 	public void test1() {
@@ -22,28 +26,27 @@ public class calculatemoney {
 	
 	public int bank(int n) {
 
-		int w=7;
 		
-		int b=0;
-		for (int i = 1; i<=n; i++) {
-			int r=0;
-			r=r+1;
-			b=r;
+		int noofweeks=n/7;//1
+		int noofdays=n%7;//3
+		int res=0;
+		int endday=7;
+		
+		
+		for (int week = 0; week <noofweeks+1; week++) {
 			
+			if(week==noofweeks)
+				endday=noofdays;
+			
+			
+			for (int day = 1; day<=endday; day++) {
+				
+				res=res+day+week;
+				
+			}
 		}
-		int b2=0;
-		for (int j = 8; j<=n; j++) {
-			int r=0;
-			
-			r=r+2;
-			b2=r;
-		}
-		b2+=b;
-		
-		
-		System.out.println(b2);
-			
-		return b2;
+		System.out.println(res);
+		return res;
 	}
 
 }

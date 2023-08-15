@@ -10,12 +10,12 @@ public class Uniquenumberofoccurences {
 	@Test
 	public void test() {
 		
-		Assert.assertEquals(true, unique(new int[] {1,2,1,2,3,2}));
+		Assert.assertEquals(true, unique(new int[] {1,2,1,2,3,1}));
 		//2,3,1,
 
 	}
 	
-	public boolean unique(int [] arr) {
+	public boolean unique(int [] arr) {//{1,2,0,2,3,2},{1,2,0,0,3,0},{}
 		
 		int[] newarr =new int[arr.length];	
 		for (int i = 0; i < arr.length; i++) {
